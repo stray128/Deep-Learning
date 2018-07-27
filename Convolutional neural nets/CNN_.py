@@ -5,6 +5,9 @@ from keras.layers import Convolution2D
 from keras.layers import MaxPooling2D
 from keras.layers import Flatten
 from keras.layers import Dense
+#specifying Number of classes in the output
+number_of_classes = input(int('specify Number of classes in the output'))
+n = number_of_classes
 
 #Initialising the CNN
 classifier = Sequential()
@@ -20,7 +23,7 @@ classifier.add(Flatten())
 
 #step 4: ANN
 classifier.add(Dense(output_dim= 128,activation='relu'))
-classifier.add(Dense(output_dim=1,activation='sigmoid'))
+classifier.add(Dense(output_dim=n,activation='sigmoid'))
 
 #compiling CNN
 classifier.compile(optimizer='adam',loss='binary_crossentropy',metrics=['accuracy'])
@@ -53,3 +56,17 @@ classifier.fit_generator(
         nb_epoch=25,
         validation_data=test_set,
         nb_val_samples=2000)
+
+#Part 3 - Making new/single predictions
+
+import numpy as np
+from keras.preprocessing import image
+test_image = image.load_img('path',target_size=(64,64))
+test_image = image.img_to_array(test_image)
+test_image = np.expand_dims(test_image,axis =0)
+result = classifier.predict(test_image)
+training_set.class_indices
+if result[0][0] == 1:
+        prediction = 'dog'
+else:
+        prediction = 'cat'        
