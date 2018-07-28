@@ -6,5 +6,7 @@ Here in this RNN we use LSTM layers in the sequential model from keras with tens
 
 *Additional Readings:*
 -http://people.idsia.ch/~juergen/lstm2003tutorial.pdf
+
 -(Movie written by AI algo using RNN's)https://arstechnica.com/gaming/2016/06/an-ai-wrote-this-movie-and-its-strangely-moving/
+
 -http://www.jmlr.org/proceedings/papers/v28/pascanu13.pdf
