@@ -1,3 +1,4 @@
+# Building a movie recommender system for users based on their ratings on the data collected. 
 # Boltzmann machines
 
 
@@ -117,34 +118,3 @@ for id_user in range(nb_users):
         s += 1.
 print('epoch: '+str(epoch)+' loss: '+str(test_loss/s))
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-    
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
